@@ -113,7 +113,7 @@ jobs:
         # 否则 prepack 会触发重新构建，覆盖掉注入的功能面板
         run: npm publish --access public --tag latest --ignore-scripts
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.CI_NPM_TOKEN }}
 
       - name: 同步 npmmirror 镜像源
         run: |
